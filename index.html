@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Z9 Game - Play & Earn</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+    }
+    header {
+      background-color: #111;
+      color: gold;
+      padding: 15px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #333;
+    }
+    .balance {
+      color: lightgreen;
+    }
+    .game-container {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .game-card {
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+      border: 1px solid gold;
+    }
+    .game-card:hover {
+      background-color: #333;
+    }
+    .refer-section {
+      margin: 30px auto;
+      max-width: 600px;
+      text-align: center;
+      border: 2px solid gold;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .refer-section input {
+      width: 80%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .login-container {
+      padding: 50px;
+      text-align: center;
+    }
+    .login-container input {
+      padding: 10px;
+      margin: 10px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      width: 80%;
+    }
+    .login-container button {
+      padding: 12px 20px;
+      background-color: gold;
+      border: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <audio id="bgMusic" loop autoplay>
+    <source src="your-audio-file.mp3" type="audio/mpeg" />
+  </audio>  <header>Z9 Game</header>  <div class="top-bar">
+    <div>User: Guest</div>
+    <div class="balance">Balance: PKR 0.00</div>
+  </div>  <div class="game-container">
+    <div class="game-card" onclick="alert('Aviator coming soon!')">
+      <h3>Aviator</h3>
+    </div>
+    <div class="game-card" onclick="alert('Dragon Tiger coming soon!')">
+      <h3>Dragon Tiger</h3>
+    </div>
+  </div>  <div class="refer-section">
+    <h2>Refer & Earn</h2>
+    <p>Invite friends and earn commission on their plays!</p>
+    <input type="text" value="https://z9game.com/?ref=YourCode" readonly onclick="this.select()">
+  </div>  <div class="login-container">
+    <h2>Login to Your Account</h2>
+    <input type="text" id="username" placeholder="Username" /><br />
+    <input type="password" id="password" placeholder="Password" /><br />
+    <button onclick="login()">Login</button>
+  </div>  <script>
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      if (username && password) {
+        alert('Logged in successfully!');
+        window.location.href = "index.html";
+      } else {
+        alert('Please fill in both fields!');
+      }
+    }
+  </script></body>
+  </html>
